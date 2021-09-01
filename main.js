@@ -1,6 +1,6 @@
 // const $today = new Date();
 // const $time = $today.getHours() + ":" + $today.getMinutes() + ":" + $today.getSeconds();
-// // console.log($time);
+// console.log($time);
 
 // const $date = document.querySelector('.clock-display');
 // console.log($date);
@@ -37,6 +37,7 @@ function showTime() {
             .innerHTML = currentTime;
 }
 showTime();
+// console.log(showTime());
 // document.querySelector('.clock-display').style.font = 'sans';
 // document.querySelector('.clock').style.color = "green";
 document.querySelector('.clock-face').style.color = "red";
@@ -64,4 +65,4 @@ const setBg = () => {
   }
   
   document.querySelector('.clock-face').addEventListener("load", setBg);
-  setInterval(setBg(),1000);
+  setInterval(setBg,1000);
