@@ -36,11 +36,18 @@ function showTime() {
     document.querySelector('.clock-display')
             .innerHTML = currentTime;
             console.log(currentTime);
+
+            var percentageTime = sec / 60;
+            console.log(percentageTime);
+
+            document.querySelector('.clock-progress-bar').style.width = 14 * percentageTime + 'rem';
 }
 showTime();
 var currentDate = Date.now();
 var newDate = new Date(currentDate);
 console.log(newDate.toString());
+
+
 
 // document.querySelector('.clock-display').style.font = 'sans';
 // document.querySelector('.clock').style.color = "green";
