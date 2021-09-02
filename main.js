@@ -35,11 +35,13 @@ function showTime() {
   
     document.querySelector('.clock-display')
             .innerHTML = currentTime;
+            console.log(currentTime);
 }
 showTime();
 var currentDate = Date.now();
 var newDate = new Date(currentDate);
 console.log(newDate.toString());
+
 // document.querySelector('.clock-display').style.font = 'sans';
 // document.querySelector('.clock').style.color = "green";
 document.querySelector('.clock-face').style.color = "red";
@@ -67,4 +69,4 @@ const setBg = () => {
 }
   
   document.querySelector('.clock').addEventListener("load", setBg);
-  setInterval(setBg,1000);
+  setInterval(setBg,2000);
