@@ -37,7 +37,9 @@ function showTime() {
             .innerHTML = currentTime;
 }
 showTime();
-// console.log(showTime());
+var currentDate = Date.now();
+var newDate = new Date(currentDate);
+console.log(newDate.toString());
 // document.querySelector('.clock-display').style.font = 'sans';
 // document.querySelector('.clock').style.color = "green";
 document.querySelector('.clock-face').style.color = "red";
@@ -54,15 +56,15 @@ function changeColor() {
 //     document.querySelector('.clcok-display') = 
     
 
-document.querySelector('.clock-face').style = randomColor;
+document.querySelector('.clock').style.backgroundColor = randomColor;
 
 var randomColor = Math.floor(Math.random()*16777215).toString(16);
 
 const setBg = () => {
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
     document.body.style.backgroundColor = "#" + randomColor;
-   
-  }
+    document.querySelector('.clock').style.background = "#" + randomColor;
+}
   
-  document.querySelector('.clock-face').addEventListener("load", setBg);
+  document.querySelector('.clock').addEventListener("load", setBg);
   setInterval(setBg,1000);
