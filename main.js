@@ -1,13 +1,4 @@
-// const $today = new Date();
-// const $time = $today.getHours() + ":" + $today.getMinutes() + ":" + $today.getSeconds();
-// console.log($time);
 
-// const $date = document.querySelector('.clock-display');
-// console.log($date);
-// $date.textContent = $time;
-
-// const color = document.querySelectorAll('div');
-// console.log(color);
 
 setInterval(showTime, 1000);
 function showTime() {
@@ -63,11 +54,29 @@ var currentDate = Date.now();
 var newDate = new Date(currentDate);
 console.log(newDate.toString());
 
+document.querySelector('.clock-face').style.color = "black";
+
+document.querySelector('.clock').addEventListener("load", showTime);
+
 
 
 // document.querySelector('.clock-display').style.font = 'sans';
 // document.querySelector('.clock').style.color = "green";
-document.querySelector('.clock-face').style.color = "black";
+
+
+
+// const $today = new Date();
+// const $time = $today.getHours() + ":" + $today.getMinutes() + ":" + $today.getSeconds();
+// console.log($time);
+
+// const $date = document.querySelector('.clock-display');
+// console.log($date);
+// $date.textContent = $time;
+
+// const color = document.querySelectorAll('div');
+// console.log(color);
+
+
 
 // document.querySelector('.clock').addEventListener("click", changeColor);
 // function changeColor() {
@@ -97,5 +106,5 @@ document.querySelector('.clock-face').style.color = "black";
   
 // }
   
-  document.querySelector('.clock').addEventListener("load", showTime);
+ 
 //   setInterval(setBg,1000);
