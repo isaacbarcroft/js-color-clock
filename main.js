@@ -67,7 +67,7 @@ console.log(newDate.toString());
 
 // document.querySelector('.clock-display').style.font = 'sans';
 // document.querySelector('.clock').style.color = "green";
-document.querySelector('.clock-face').style.color = "red";
+document.querySelector('.clock-face').style.color = "black";
 
 // document.querySelector('.clock').addEventListener("click", changeColor);
 // function changeColor() {
