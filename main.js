@@ -39,8 +39,24 @@ function showTime() {
 
             var percentageTime = sec / 60;
             console.log(percentageTime);
-
+            
             document.querySelector('.clock-progress-bar').style.width = 14 * percentageTime + 'rem';
+
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = "#" + randomColor;
+    document.querySelector('.clock').style.background = "#" + randomColor;
+    console.log("#" + randomColor);
+    var clockDisplay = document.querySelector('.clock-display')
+
+
+    clockDisplay.addEventListener('mouseover', function(){
+        clockDisplay.innerHTML = "#" + randomColor;
+    })
+if (clockDisplay.matches(':hover')){
+    clockDisplay.innerHTML = "#" + randomColor;
+    
+}
+
 }
 showTime();
 var currentDate = Date.now();
@@ -53,27 +69,33 @@ console.log(newDate.toString());
 // document.querySelector('.clock').style.color = "green";
 document.querySelector('.clock-face').style.color = "red";
 
-document.querySelector('.clock').addEventListener("click", changeColor);
-function changeColor() {
-    document.body.style.backgroundColor = "green";
-    return false;
-}
+// document.querySelector('.clock').addEventListener("click", changeColor);
+// function changeColor() {
+//     document.body.style.backgroundColor = "green";
+//     return false;
+
 
 // document.querySelector('.clcok-display').addEventListener("mouseover", myScript);
 
-// function mouseOver(){
 //     document.querySelector('.clcok-display') = 
     
 
-document.querySelector('.clock').style.backgroundColor = randomColor;
+// document.querySelector('.clock').style.backgroundColor = randomColor;
 
-var randomColor = Math.floor(Math.random()*16777215).toString(16);
 
-const setBg = () => {
-    const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    document.body.style.backgroundColor = "#" + randomColor;
-    document.querySelector('.clock').style.background = "#" + randomColor;
-}
+// const setBg = () => {
+//     const randomColor = Math.floor(Math.random()*16777215).toString(16);
+//     document.body.style.backgroundColor = "#" + randomColor;
+//     document.querySelector('.clock').style.background = "#" + randomColor;
+//     console.log("#" + randomColor);
+//     var clockDisplay = document.querySelector('.clock-display')
+
+
+//     clockDisplay.addEventListener('mouseover', function(){
+//         clockDisplay.innerHTML = "#" + randomColor;
+//     })
   
-  document.querySelector('.clock').addEventListener("load", setBg);
-  setInterval(setBg,2000);
+// }
+  
+  document.querySelector('.clock').addEventListener("load", showTime);
+//   setInterval(setBg,1000);
